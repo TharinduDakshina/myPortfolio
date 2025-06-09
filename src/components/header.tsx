@@ -16,7 +16,7 @@ import {
     useTheme,
 } from "@mui/material"
 import { Menu as MenuIcon } from "@mui/icons-material"
-import {styled} from "@mui/system";
+import {styled, TypographyProps} from "@mui/system";
 
 const StyleListItemText = styled(ListItemText)(()=>({
     textAlign: "center",
@@ -30,7 +30,11 @@ const StyleAppBar = styled(AppBar)(() => ({
     borderStartStartRadius:"0",
 }))
 
-const StyledTypography = styled(Typography)(({theme}) => ({
+interface StyledTypographyProps extends TypographyProps {
+    component?: string
+}
+
+const StyledTypography = styled(Typography)<StyledTypographyProps>(({theme}) => ({
     flexGrow: 1,
     color: `${theme.palette.primary.main}`,
     fontWeight: "bold"

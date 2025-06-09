@@ -13,6 +13,7 @@ import {
     Chip, styled,
 } from "@mui/material"
 import { GitHub as GitHubIcon,} from "@mui/icons-material"
+import {TypographyProps} from "@mui/system";
 
 const projects = [
     {
@@ -44,7 +45,11 @@ const StyleMainBox = styled(Box)(()=>({
     backgroundColor: "grey.50"
 }))
 
-const StyleTypography =styled(Typography)(()=>({
+interface StyledTypographyProps extends TypographyProps {
+    component?: string
+}
+
+const StyleTypography =styled(Typography)<StyledTypographyProps>(()=>({
     fontWeight: "bold",
     marginBottom: 48
 }))

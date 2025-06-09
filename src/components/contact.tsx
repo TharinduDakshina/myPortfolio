@@ -14,14 +14,18 @@ import {
 } from "@mui/icons-material"
 import emailjs from '@emailjs/browser';
 import Alert from '@mui/material/Alert';
-import {absolutePathToPage} from "next/dist/shared/lib/page-path/absolute-path-to-page";
+import {TypographyProps} from "@mui/system";
 
 const StyleMainBox  = styled(Box)(()=>({
     paddingTop:80,
     paddingBottom:80,
 }))
 
-const StyleTypographyMainTitle = styled(Typography)(()=>({
+interface StyledTypographyProps extends TypographyProps {
+    component?: string
+}
+
+const StyleTypographyMainTitle = styled(Typography)<StyledTypographyProps>(()=>({
     fontWeight: "bold",
     marginBottom: 48
 }))
