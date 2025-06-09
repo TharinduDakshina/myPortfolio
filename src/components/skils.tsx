@@ -1,6 +1,7 @@
 "use client"
 
 import { Box, Typography, Container, Grid, Chip, Paper, styled } from "@mui/material"
+import {TypographyProps} from "@mui/system";
 
 const skillCategories = [
     {
@@ -28,7 +29,11 @@ const StyleChip = styled(Chip)(({theme})=>({
     },
 }))
 
-const StyleTypography = styled(Typography)(()=>({
+interface StyledTypographyProps extends TypographyProps {
+    component?: string
+}
+
+const StyleTypography = styled(Typography)<StyledTypographyProps>(()=>({
     fontWeight: "bold",
     marginBottom: 48
 }))
@@ -74,8 +79,7 @@ export function Skills() {
                                             key={skillIndex}
                                             label={skill}
                                             variant="outlined"
-                                            tabIndex={-1}         // removes keyboard focus
-                                            disableRipple={true}
+                                            tabIndex={-1}
                                             onClick={skillOnClickHandel}
                                         />
                                     ))}

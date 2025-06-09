@@ -1,6 +1,6 @@
 "use client"
 
-import { Box, Typography, Button, Container, Avatar } from "@mui/material"
+import {Box, Typography, Button, Container, Avatar, ButtonProps} from "@mui/material"
 import { Download as DownloadIcon, Email as EmailIcon } from "@mui/icons-material"
 import {styled} from "@mui/system";
 
@@ -51,12 +51,21 @@ const StyleContactMeButton = styled(Button)(()=>({
     color: "primary.main",
     "&:hover": { backgroundColor: "grey.100" },
 }))
+interface DownloadButtonProps extends ButtonProps {
+    component?: 'a';
+    href?: string;
+    download?: string;
+}
 
-const StyleDownloadCVButton = styled(Button)(()=>({
-    borderColor: "white",
-    color: "white",
-    "&:hover": { borderColor: "grey.300", backgroundColor: "rgba(255,255,255,0.1)" },
-}))
+const StyleDownloadCVButton = styled(Button)<DownloadButtonProps>(() => ({
+        borderColor: "white",
+        color: "white",
+        "&:hover": {
+            borderColor: "grey.300",
+            backgroundColor: "rgba(255,255,255,0.1)"
+        },
+    })
+);
 
 const StyleAvatarBox = styled(Box)(()=>({
     flex: 1, display: "flex",
@@ -103,6 +112,7 @@ export function Hero() {
                             <StyleDownloadCVButton
                                 variant="outlined"
                                 size="large"
+                                component="a"
                                 startIcon={<DownloadIcon />}
                                 href="./TharinduDakshina.pdf"
                                 download="TharinduDakshina.pdf"
