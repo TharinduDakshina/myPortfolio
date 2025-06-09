@@ -12,14 +12,14 @@ import {
     Button,
     Chip, styled,
 } from "@mui/material"
-import { GitHub as GitHubIcon,} from "@mui/icons-material"
+import GitHubIcon from '@mui/icons-material/GitHub';
 import {TypographyProps} from "@mui/system";
 
 const projects = [
     {
         title: "EchoLynk- Conversation between the deaf and mute persons with healthy person.",
         description: "This is mobile & web application.I developed the sinIn, signUp part, implemented the UIs, and nowadays implementing the live chat part",
-        image: "/EchoLynk.png",
+        image: "/my.jpg",
         technologies: [" Java", "XML", "React.Js", "Spring Boot", "Firebase", "python", "MVVM", "MVC", "Fast API"],
         githubUrl: "https://github.com/Third-Year-Project-05",
     },
