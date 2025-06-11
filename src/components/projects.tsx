@@ -6,7 +6,6 @@ import {
     Container,
     Grid,
     Card,
-    CardMedia,
     CardContent,
     CardActions,
     Button,
@@ -14,6 +13,7 @@ import {
 } from "@mui/material"
 import GitHubIcon from '@mui/icons-material/GitHub';
 import {TypographyProps} from "@mui/system";
+import Image from 'next/image'
 
 const projects = [
     {
@@ -86,7 +86,12 @@ export function Projects() {
                     {projects.map((project, index) => (
                         <Grid key={index}>
                             <StyleCard>
-                                <CardMedia component="img" height="200"  image={project.image} alt={project.title}  />
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    width={300}
+                                    height={200}
+                                />
                                 <CardContent sx={{ flexGrow: 1 }}>
                                     <Typography gutterBottom variant="h5" component="h3" sx={{ fontWeight: "bold" }}>
                                         {project.title}
