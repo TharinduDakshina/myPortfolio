@@ -19,7 +19,7 @@ const projects = [
     {
         title: "EchoLynk- Conversation between the deaf and mute persons with healthy person.",
         description: "This is mobile & web application.I developed the sinIn, signUp part, implemented the UIs, and nowadays implementing the live chat part",
-        image: "./images/my.jpg",
+        image: "./images/EchoLynk.png",
         technologies: [" Java", "XML", "React.Js", "Spring Boot", "Firebase", "python", "MVVM", "MVC", "Fast API"],
         githubUrl: "https://github.com/Third-Year-Project-05",
     },
@@ -89,8 +89,11 @@ export function Projects() {
                                 <Image
                                     src={project.image}
                                     alt={project.title}
-                                    width={300}
-                                    height={200}
+                                    width={500}
+                                    height={300}
+                                    style={{
+                                        width: 'auto',
+                                    }}
                                 />
                                 <CardContent sx={{ flexGrow: 1 }}>
                                     <Typography gutterBottom variant="h5" component="h3" sx={{ fontWeight: "bold" }}>
