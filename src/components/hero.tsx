@@ -123,7 +123,7 @@ export function Hero() {
                     </Box>
                     <StyleAvatarBox >
                         <StyleAvatar
-                            src="./image/my.jpg"
+                            src="./images/my.jpg"
                             alt="Tharindu Dakshina"
                         />
                     </StyleAvatarBox>
