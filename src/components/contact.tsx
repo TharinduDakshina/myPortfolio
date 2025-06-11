@@ -63,15 +63,15 @@ export function Contact() {
         try {
             // Replace with your EmailJS service ID, template ID, and public key
             const result = await emailjs.send(
-                `${process.env.EMAIL_SERVICE_ID}`,     // Get from EmailJS dashboard
-                `${process.env.EMAIL_SERVICE_TEMPLATE_ID}`,    // Create template in EmailJS
+                `${process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID}`,     // Get from EmailJS dashboard
+                `${process.env.NEXT_PUBLIC_EMAIL_SERVICE_TEMPLATE_ID}`,    // Create template in EmailJS
                 {
                     from_name: formData.name,
                     from_email: formData.email,
                     message: formData.message,
                     // Add other form fields as needed
                 },
-                `${process.env.EMAIL_SERVICE_PUBLIC_KEY}`      // Get from EmailJS dashboard
+                `${process.env.NEXT_PUBLIC_EMAIL_SERVICE_PUBLIC_KEY}`      // Get from EmailJS dashboard
             );
 
             console.log('Email sent successfully:', result.text);
@@ -114,7 +114,11 @@ export function Contact() {
                             </Box>
                             <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
                                 <PhoneIcon sx={{ mr: 2, color: "primary.main" }} />
-                                <Typography variant="body1">+94 761339805</Typography>
+                                <Typography variant="body1">
+                                    <a href="tel:+94761339805" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                        +94 761339805
+                                    </a>
+                                </Typography>
                             </Box>
                             <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
                                 <LocationIcon sx={{ mr: 2, color: "primary.main" }} />
