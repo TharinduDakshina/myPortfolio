@@ -63,7 +63,7 @@ export function Contact() {
         try {
             // Replace with your EmailJS service ID, template ID, and public key
             const result = await emailjs.send(
-                'service_xyoou2b',     // Get from EmailJS dashboard
+                'service_91wop59',     // Get from EmailJS dashboard
                 'template_p6bogbn',    // Create template in EmailJS
                 {
                     from_name: formData.name,
