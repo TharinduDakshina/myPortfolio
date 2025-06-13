@@ -32,10 +32,9 @@ const features = [
     },
 ]
 
-const StyleMainContainerBox = styled(Box)(({theme}) => ({
+const StyleMainContainerBox = styled(Box)(() => ({
     paddingBottom: 100,
     paddingTop: 100,
-    backgroundColor: theme.palette.background.paper,
 }))
 
 interface StyledTypographyProps extends TypographyProps {
@@ -50,6 +49,7 @@ const StyleTitleTypography = styled(Typography)<StyledTypographyProps>(({theme})
 
 const StylePaper = styled(Paper)(({theme}) => ({
     maxWidth: '600px',
+    maxHeight: '600px',
     padding: 24,
     display: "flex",
     alignItems: "center",
@@ -84,24 +84,22 @@ export function About() {
                         </Typography>
 
                     </Grid>
-                    <Grid>
-                        <Grid container spacing={3}>
-                            {features.map((feature, index) => (
-                                <Grid key={index}>
-                                    <StylePaper elevation={2}>
-                                        <Box sx={{color: "primary.main"}}>{feature.icon}</Box>
-                                        <Box>
-                                            <Typography variant="h6" gutterBottom sx={{fontWeight: "bold"}}>
-                                                {feature.title}
-                                            </Typography>
-                                            <Typography variant="body2" color="text.secondary">
-                                                {feature.description}
-                                            </Typography>
-                                        </Box>
-                                    </StylePaper>
-                                </Grid>
-                            ))}
-                        </Grid>
+                    <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 2 }}>
+                        {features.map((feature, index) => (
+                            <Grid key={index} size={6}>
+                                <StylePaper elevation={2}>
+                                    <Box sx={{color: "primary.main"}}>{feature.icon}</Box>
+                                    <Box>
+                                        <Typography variant="h6" gutterBottom sx={{fontWeight: "bold"}}>
+                                            {feature.title}
+                                        </Typography>
+                                        <Typography variant="body2" color="text.secondary">
+                                            {feature.description}
+                                        </Typography>
+                                    </Box>
+                                </StylePaper>
+                            </Grid>
+                        ))}
                     </Grid>
                 </Grid>
             </Container>

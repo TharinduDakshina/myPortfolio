@@ -93,7 +93,7 @@ export function Header() {
             <StyleAppBar position="fixed">
                 <Toolbar>
                     <StyledTypography variant="h6" component="div">
-                        Portfolio
+                        Tharindu Dakshina
                     </StyledTypography>
                     {isMobile ? (
                         <IconButton color="primary" aria-label="open drawer" edge="start" onClick={handleDrawerToggle}>
