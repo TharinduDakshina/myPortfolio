@@ -94,7 +94,7 @@ export function Header() {
     const drawer = (
         <StyleBox2 onClick={handleDrawerToggle}>
             <StyleTypographyForMobileMenu variant="h6">
-                Portfolio
+                Dakshina 🙋‍♂️
             </StyleTypographyForMobileMenu>
             <StyleList>
                 {navItems.map((item) => (
