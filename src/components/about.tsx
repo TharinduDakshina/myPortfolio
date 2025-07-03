@@ -7,8 +7,7 @@ import {
     Palette as DesignIcon,
     Speed as SpeedIcon
 } from "@mui/icons-material"
-import {styled, TypographyProps, width} from "@mui/system";
-import {h2} from "framer-motion/m";
+import {styled, TypographyProps,} from "@mui/system";
 
 const features = [
     {
