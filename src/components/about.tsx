@@ -7,7 +7,8 @@ import {
     Palette as DesignIcon,
     Speed as SpeedIcon
 } from "@mui/icons-material"
-import {styled, TypographyProps} from "@mui/system";
+import {styled, TypographyProps, width} from "@mui/system";
+import {h2} from "framer-motion/m";
 
 const features = [
     {
@@ -84,13 +85,13 @@ export function About() {
                         </Typography>
 
                     </Grid>
-                    <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 2 }}>
+                    <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 2 }}>
                         {features.map((feature, index) => (
-                            <Grid key={index} size={6}>
+                            <Grid key={index} size={6} sx={{}}>
                                 <StylePaper elevation={2}>
                                     <Box sx={{color: "primary.main"}}>{feature.icon}</Box>
-                                    <Box>
-                                        <Typography variant="h6" gutterBottom sx={{fontWeight: "bold"}}>
+                                    <Box sx={{overflow:"hidden"}}>
+                                        <Typography variant="h6" gutterBottom sx={{fontWeight: "bold",fontSize:"15px"}}>
                                             {feature.title}
                                         </Typography>
                                         <Typography variant="body2" color="text.secondary">
