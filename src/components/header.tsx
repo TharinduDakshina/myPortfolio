@@ -20,7 +20,10 @@ import {styled, TypographyProps} from "@mui/system";
 
 const StyleListItemText = styled(ListItemText)(()=>({
     textAlign: "center",
-    cursor: "pointer"
+    cursor: "pointer",
+    color:"white" ,
+    borderBottom:"1px solid gray",
+    paddingBottom:"5%"
 }))
 
 const StyleAppBar = styled(AppBar)(() => ({
@@ -53,6 +56,24 @@ const StyleDrawer =styled(Drawer)(({theme}) => ({
     "& .MuiDrawer-paper": { boxSizing: "border-box", width: 240 },
 }))
 
+const StyleList = styled(List)(() => ({
+    backgroundColor: "black",
+}))
+
+const StyleBox2 =styled(Box)(() => ({
+    textAlign: "center" ,
+    backgroundColor: "black",
+    height: "100vh"
+}))
+
+const StyleTypographyForMobileMenu = styled(Typography)(() => ({
+    my: 2 ,
+    color: "white",
+    paddingBottom:"30px",
+    paddingTop:"20px"
+}))
+
+
 const navItems = ["About", "Skills", "Projects", "Contact"]
 
 export function Header() {
@@ -71,11 +92,11 @@ export function Header() {
     }
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-            <Typography variant="h6" sx={{ my: 2 }}>
+        <StyleBox2 onClick={handleDrawerToggle}>
+            <StyleTypographyForMobileMenu variant="h6">
                 Portfolio
-            </Typography>
-            <List>
+            </StyleTypographyForMobileMenu>
+            <StyleList>
                 {navItems.map((item) => (
                     <ListItem key={item} disablePadding>
                         <StyleListItemText
@@ -84,8 +105,8 @@ export function Header() {
                         />
                     </ListItem>
                 ))}
-            </List>
-        </Box>
+            </StyleList>
+        </StyleBox2>
     )
 
     return (
