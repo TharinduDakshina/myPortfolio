@@ -33,9 +33,16 @@ const projects = [
     {
         title: "Car-rental- Rent by cars",
         description: "I developed a web application for renting and buying cars as a learning project. It allows users to browse vehicles, compare options, and complete transactions easily",
-        image: "./images/carRental.png",
+        image: "./images/carSale.png",
         technologies: ["Java", "Spring", "JavaScript", "HTML", "CSS", "MYSQL"],
         githubUrl: "https://github.com/TharinduDakshina/car_Rental",
+    },
+    {
+        title: "Car-sale- Sales the cars ",
+        description: "I developed a mobile application for sale cars as a learning project. It allows users to browse vehicles, compare options, and complete transactions easily",
+        image: "./images/carRental.png",
+        technologies: ["Flutter","Firebase"],
+        githubUrl: "https://github.com/TharinduDakshina/Car-sale.git",
     },
 ]
 
