@@ -40,7 +40,7 @@ const projects = [
     {
         title: "Car-sale- Sales the cars ",
         description: "I developed a mobile application for sale cars as a learning project. It allows users to browse vehicles, compare options, and complete transactions easily",
-        image: "./images/carSale.png",
+        image: "./images/car_sale.jpg",
         technologies: ["Flutter","Firebase"],
         githubUrl: "https://github.com/TharinduDakshina/Car-sale.git",
     },
