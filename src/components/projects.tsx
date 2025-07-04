@@ -96,10 +96,10 @@ export function Projects() {
                                 <Image
                                     src={project.image}
                                     alt={project.title}
-                                    width={500}
+                                    width={200}
                                     height={300}
                                     style={{
-                                        width: 'auto',
+                                        width:"auto",
                                     }}
                                 />
                                 <CardContent sx={{ flexGrow: 1 }}>
