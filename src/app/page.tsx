@@ -14,7 +14,7 @@ const events: TimelineEvent[] = [
     {
         id: "1",
         date: "Present",
-        title: "A final year Computer Science undergraduate - UCSC",
+        title: "A final year Computer Science graduate - UCSC",
         highlight: "UCSC",
         description: "Studied Middleware Architecture, Software Project Management, Mobile Application Development and " +
             " Systems and Network Administration",
